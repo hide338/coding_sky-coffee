@@ -1,0 +1,249 @@
+@use './variablse' as *;
+@use './breakpoint' as *;
+@use './grid' as *;
+
+/*********************************************
+** Common
+*********************************************/
+body {
+  font-family: $font-family;
+  font-size: 15px;
+  letter-spacing: 0.1rem;
+  @include mq(tb) {
+    font-size: 16px;
+  }
+}
+
+.container {
+  margin: 0 auto;
+  max-width: $container-max-width;
+  padding: 0 $sp-container-padding-x;
+  @include mq(tb) {
+    padding: 0;
+  }
+}
+
+/*********************************************
+** FV
+*********************************************/
+.fv {
+  display: flex;
+  justify-content: center;
+  img {
+    height: auto;
+    max-width:100%;
+  }
+  &__pc {
+    display: none;
+    @include mq(tb) {
+      display: block;
+    }
+  }
+  &__sp {
+    display: block;
+    @include mq(tb) {
+      display: none;
+    }
+  }
+}
+
+/*********************************************
+** ナビゲーション
+*********************************************/
+.nav {
+  margin-top: 30px;
+  @include mq(tb) {
+    margin-top: 40px;
+  }
+}
+
+.nav-list {
+  display: flex;
+  justify-content: center;
+
+  &__item {
+    margin-left: 50px;
+    &:first-of-type {
+      margin-left: 0;
+    }
+    @include mq(tb) {
+      margin-left: 80px;
+    }
+  }
+}
+
+/*********************************************
+** コンセプト
+*********************************************/
+.concept {
+  margin-top: 70px;
+  display: grid;
+  @include grid-cols(2);
+  @include gap(30);
+  @include mq(tb) {
+    margin-top: 90px;
+    @include gap(40);
+  }
+
+  &__img {
+    width: 100%;
+    @include col-span(2);
+    @include mq(tb) {
+      @include col-span(1);
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+  }
+
+  &__text-area {
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    @include col-span(2);
+    @include mq(tb) {
+      margin-top: 0;
+      @include col-span(1);
+    }
+  }
+
+  &__title {
+    color: $main-color;
+    font-size: 26px;
+    margin-top: 15px;
+    font-weight: bold;
+    @include mq(tb) {
+      margin-top: 20px;
+      font-size: 32px;
+    }
+  }
+
+  &__text {
+    margin-top: 20px;
+    line-height: 27px;
+    @include mq(tb) {
+      margin-top: 30px;
+    }
+  }
+}
+
+/*********************************************
+** ブログ
+*********************************************/
+.blog {
+  margin-top: 90px;
+  @include mq(tb) {
+    margin-top: 100px;
+  }
+
+  &__header {
+    text-align: center;
+  }
+
+  &__title {
+    color: $main-color;
+    font-weight: bold;
+    font-size: 30px;
+    letter-spacing: calc( 1rem / 100 * 3);
+    @include mq(tb) {
+      letter-spacing: calc( 1rem / 100 * 8);
+      font-size: 32px;
+    }
+  }
+  
+  &__title-ja {
+    margin-top: 3px;
+    font-size: 12px;
+    letter-spacing: calc( 1rem / 100 * 3);
+    @include mq(tb) {
+      margin-top: 3px;
+      font-size: 13px;
+    }
+  }
+
+  &__body {
+    margin-top: 28px;
+  }
+
+  .blog-list {
+    display: grid;
+    @include grid-cols(3);
+    @include gap(10);
+    @include mq(tb) {
+      @include gap(30);
+      margin-top: 30px;
+    }
+
+    &__item {
+      @include col-span(3);
+      @include mq(tb) {
+        @include col-span(1);
+      }
+    }
+
+    &__link {
+      &:hover {
+        opacity: .7;
+      }
+    }
+
+    &__img {
+      width: 100%;
+      img {
+        max-width: 100%;
+        height: auto;
+        aspect-ratio: 350 / 180;
+      }
+    }
+
+    &__text {
+      margin-top: 12px;
+    }
+
+    &__title {
+      font-size: 15px;
+      font-weight: bold;
+    }
+
+    &__date {
+      font-size: 12px;
+      margin-top: 2px;
+      @include mq(tb) {
+        margin-top: 6px;
+      }
+    }
+  }
+
+  &__btn {
+    position: relative;
+    margin: 20px auto 0;
+    display: block;
+    // width: 100%;
+    padding: 18px;
+    color: $main-color;
+    border: 1px solid $main-color;
+    border-radius: 3px;
+    text-align: center;
+    font-size: 14px;
+    @include mq(tb) {
+      margin-top: 30px;
+      font-size: 15px;
+      width: 220px;
+    }
+    &::after {
+      position: absolute;
+      content: '';
+      width: 5px;
+      height: 9px;
+      background-image: url(./img/icon_arrow-right.png);
+      background-position: center;
+      background-size: contain;
+      top: 50%;
+      right: 16.5px;
+      transform: translateY(-50%);
+    }
+  }
+}
+

@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+  <!-- スタイルシート -->
+  <link rel="stylesheet" href="style.css">
+
+  <!-- Google Font -->
+
+
+  <!-- ファーストビューの画像を先に読み込む設定 -->
+  <link rel="preload" as="image" href="<?= get_template_directory_uri(); ?>/img/fv.jpg">
+
+</head>
+<body>
+  <header class="header">
+    <h1 class="header__logo">
+      <a href="#" class="header__link">
+        <img src="./img/logo.png" alt="sky coffee のロゴ画像">
+      </a>
+    </h1>
+    <!-- /.header__logo -->
+  </header>
+  <main class="main">
+
+    <section class="fv">
+      <img class="fv__pc" src="./img/pc_main-visual.png" alt="たくさんのコーヒーカップ">
+      <img class="fv__sp" src="./img/SP_main-visual.png" alt="たくさんのコーヒーカップ">
+    </section>
+    <!-- /.fv -->
+
+    <section class="nav">
+      <ul class="nav-list">
+        <li class="nav-list__item"><a href="#menu" class="nav-list__link">menu</a></li>
+        <li class="nav-list__item"><a href="#blog" class="nav-list__link">blog</a></li>
+        <li class="nav-list__item"><a href="#acces" class="nav-list__link">acces</a></li>
+      </ul>
+    </section>
+
+    <section class="concept container">
+      <div class="concept__img">
+        <img src="./img/concept.png" alt="青いコーヒーカップにコーヒーが入っていて、上から撮影している写真">
+      </div>
+      <!-- /.concept__img -->
+      <div class="concept__text-area">
+        <p class="concopt__title-en">Concept</p>
+        <!-- /.concopt__title--en -->
+        <h2 class="concept__title">心静かにコーヒーを</h2>
+        <!-- /.concept__title -->
+        <p class="concept__text">立ち止まって、<br>空の青さを眺めて、<br>一息つきましょう</p>
+        <!-- /.concept__text -->
+      </div>
+      <!-- /.concept__text-area -->
+    </section>
+    <!-- /.section concept container -->
+
+    <section class="blog container">
+      <div class="blog__header">
+        <h2 class="blog__title">blog</h2>
+        <!-- /.blog__title -->
+        <p class="blog__title-ja">ブログ</p>
+        <!-- /.blog__title-ja -->
+      </div>
+      <!-- /.blog__header -->
+      <div class="blog__body">
+        <ul class="blog-list">
+          <li class="blog-list__item">
+            <a href="#" class="blog-list__link">
+              <div class="blog-list__img">
+                <img src="./img/thumbnail01.png" alt="青いショッピングカー">
+              </div>
+              <!-- /.blog-list__img -->
+              <div class="blog-list__text">
+                <h3 class="blog-list__title">コーヒーカー始めました。</h3>
+                <!-- /.blog-list__title -->
+                <p class="blog-list__date"><time>2030.08.08</time></p>
+                <!-- /.blog-list__date -->
+              </div>
+              <!-- /.blog-list__text -->
+            </a>
+          </li>
+          <!-- /.blog-list__item -->
+          <li class="blog-list__item">
+            <a href="#" class="blog-list__link">
+              <div class="blog-list__img">
+                <img src="./img/thumbnail02.png" alt="グラスに入っているミルク">
+              </div>
+              <!-- /.blog-list__img -->
+              <div class="blog-list__text">
+                <h3 class="blog-list__title">濃厚クリーミーなミルクをどうぞ</h3>
+                <!-- /.blog-list__title -->
+                <p class="blog-list__date"><time>2030.08.05</time></p>
+                <!-- /.blog-list__date -->
+              </div>
+              <!-- /.blog-list__text -->
+            </a>
+          </li>
+          <!-- /.blog-list__item -->
+          <li class="blog-list__item">
+            <a href="#" class="blog-list__link">
+              <div class="blog-list__img">
+                <img src="./img/thumbnail03.png" alt="iPhoneで曲を再生している">
+              </div>
+              <!-- /.blog-list__img -->
+              <div class="blog-list__text">
+                <h3 class="blog-list__title">Sky Coffeeのオリジナル曲が完成！無料ダウンロード可能です。</h3>
+                <!-- /.blog-list__title -->
+                <p class="blog-list__date"><time>2030.08.02</time></p>
+                <!-- /.blog-list__date -->
+              </div>
+              <!-- /.blog-list__text -->
+            </a>
+          </li>
+          <!-- /.blog-list__item -->
+          <li class="blog-list__item">
+            <a href="#" class="blog-list__link">
+              <div class="blog-list__img">
+                <img src="./img/thumbnail04.png" alt="雲の上空の山">
+              </div>
+              <!-- /.blog-list__img -->
+              <div class="blog-list__text">
+                <h3 class="blog-list__title">ハイキング用のコーヒーを販売中です。</h3>
+                <!-- /.blog-list__title -->
+                <p class="blog-list__date"><time>2030.07.28</time></p>
+                <!-- /.blog-list__date -->
+              </div>
+              <!-- /.blog-list__text -->
+            </a>
+          </li>
+          <!-- /.blog-list__item -->
+          <li class="blog-list__item">
+            <a href="#" class="blog-list__link">
+              <div class="blog-list__img">
+                <img src="./img/thumbnail05.png" alt="壁紙のデザイン">
+              </div>
+              <!-- /.blog-list__img -->
+              <div class="blog-list__text">
+                <h3 class="blog-list__title">ショップの壁を塗ってみました。</h3>
+                <!-- /.blog-list__title -->
+                <p class="blog-list__date"><time>2030.07.27</time></p>
+                <!-- /.blog-list__date -->
+              </div>
+              <!-- /.blog-list__text -->
+            </a>
+          </li>
+          <!-- /.blog-list__item -->
+          <li class="blog-list__item">
+            <a href="#" class="blog-list__link">
+              <div class="blog-list__img">
+                <img src="./img/thumbnail06.png" alt="コーヒーとノートがある画像">
+              </div>
+              <!-- /.blog-list__img -->
+              <div class="blog-list__text">
+                <h3 class="blog-list__title">ブログをはじめました。</h3>
+                <!-- /.blog-list__title -->
+                <p class="blog-list__date"><time>2030.07.26</time></p>
+                <!-- /.blog-list__date -->
+              </div>
+              <!-- /.blog-list__text -->
+            </a>
+          </li>
+          <!-- /.blog-list__item -->
+        </ul>
+        <!-- /.blog-list -->
+        <a href="#" class="blog__btn">ブログ一覧</a>
+        <!-- /.blog__btn-link -->
+      </div>
+      <!-- /.blog__body -->
+    </section>
+    <!-- /.blog -->
+  </main>
+  <footer class="footer">
+    <div class="footer__logo">
+      <img src="./img/logo-white.png" alt="sky coffeeのロゴ">
+    </div>
+    <!-- /.footer__logo -->
+    <p class="footer__copy">&copy;Sky Coffee</p>
+    <!-- /.footer__copy -->
+  </footer>
+</body>
+</html>

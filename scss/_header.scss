@@ -1,0 +1,26 @@
+@use './variablse' as *;
+@use './breakpoint' as *;
+
+/*********************************************
+** Header
+*********************************************/
+.header {
+  padding: 30px 0;
+  &__logo {
+    margin: 0 auto;
+    width: 160px;
+    height: 32px;
+    img {
+      width: 100%;
+      height: auto;
+      vertical-align: bottom;
+    }
+    @include mq(tb) {
+      width: 280px;
+      height: 56px;
+    }
+  }
+  @include mq(tb) {
+    padding: 50px 0;
+  }
+}

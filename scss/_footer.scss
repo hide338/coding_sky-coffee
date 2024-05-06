@@ -1,0 +1,41 @@
+@use './variablse' as *;
+@use './breakpoint' as *;
+@use './grid' as *;
+
+/*********************************************
+** フッター
+*********************************************/
+.footer {
+  background-color: #000000;
+  color: #fff;
+  margin-top: 50px;
+  @include mq(tb) {
+    margin-top: 70px;
+  }
+
+  &__logo {
+    margin: 0 auto;
+    padding-top: 60px;
+    width: 100px;
+    img {
+      max-width: 100%;
+      height: auto;
+      vertical-align: bottom;
+    }
+    @include mq(tb) {
+      width: 180px;
+    }
+  }
+
+  &__copy {
+    padding: 40px 0 30px;
+    text-align: center;
+    font-size: 10px;
+    font-weight: 100;
+    color: #8B8B8B;
+    @include mq(tb) {
+      padding: 50px 0 20px;
+      font-size: 12px;
+    }
+  }
+}
